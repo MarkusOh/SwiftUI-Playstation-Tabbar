@@ -13,7 +13,6 @@ struct Home: View {
     var body: some View {
         VStack(spacing: 0) {
             Spacer()
-            
             CustomTabBar(activeTab: $activeTab)
         }
         .ignoresSafeArea(.all, edges: .bottom)
@@ -23,5 +22,6 @@ struct Home: View {
                 .fill(.background)
                 .ignoresSafeArea()
         }
+        .persistentSystemOverlays(.hidden)
     }
 }
